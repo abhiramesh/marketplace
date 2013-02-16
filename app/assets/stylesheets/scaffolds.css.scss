@@ -21,6 +21,10 @@ body {
   background: #FFFFFF;
 }
 
+.navbar{
+  margin-bottom: 0px;
+}
+
 .logo{
   width: 120px;
   padding-left: 10%;
@@ -30,8 +34,36 @@ body {
   padding-right: 10%;
 }
 
+.full-width-pic{
+  background: url('frontpic.png');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: brightness(-0.06);
+}
+
+.front-text{
+  font-family: 'Oswald', sans-serif;
+  font-size: 52px;
+  line-height: 63px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.get-started{
+  margin-top: 70px;
+  background-color: #EE743D;
+  width: 200px;
+  border-radius: 25px;
+  padding: 20px 10px 20px 10px;
+  opacity: 0.9;
+  color: black;
+  font-size: 15px;
+}
+
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Varela', sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -43,6 +75,14 @@ pre {
 }
 
 a {
+  color: black;
+  text-decoration: none;
+  font-family: 'Varela', sans-serif;
+}
+
+a:hover{
+  color: #1A1A1A;
+  text-decoration: none;
 }
 
 
