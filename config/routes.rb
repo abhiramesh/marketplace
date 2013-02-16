@@ -1,4 +1,20 @@
 Marketplace::Application.routes.draw do
+  
+  resources :listings
+
+
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" } do
+    get '/logout', :to => "devise/sessions#destroy"
+    get '/login', :to => "static_pages#home"
+  end
+
+  resources :users
+
+  root :to => "static_pages#home"
+
+  match '/users/auth/twitter/callback' => 'services#create'
+  resources :services, :only => [:index, :create]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

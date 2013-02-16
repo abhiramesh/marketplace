@@ -1,0 +1,26 @@
+<% content_for :head do %>
+  <%= tag :meta, property: "fb:app_id", content: "310803435708954" %>
+  <%= tag :meta, property: "og:site_name", content: "Mrktplc" %>
+  <%= tag :meta, property: "og:type", content: "mrktplc:item" %>
+  <%= tag :meta, property: "og:title", content: @listing.name %>
+  <%= tag :meta, property: "og:url", content: request.protocol + request.host_with_port + listing_path(@listing) %>
+  <%= tag :meta, property: "og:image", content: request.protocol + request.host_with_port + image_path(@listing.image) %>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+	<div class="span2">
+		<%= @listing.name %>
+	</div>
+	<div class="span4">
+		<%= @listing.description %>
+	</div>
+	<div class="span6">
+		<%= image_tag @listing.image.to_s %>
+	</div>
+</div>
+
+
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>

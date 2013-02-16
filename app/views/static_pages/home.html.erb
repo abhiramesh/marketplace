@@ -1,0 +1,10 @@
+<div class="full-width-pic">
+</div>
+<div class="hero-unit">
+	<h1> Welcome </h1>
+	<% if current_user %>
+		<%= current_user.name %>
+	<% end %>
+	<br>
+	<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+</div>
