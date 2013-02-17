@@ -1,5 +1,5 @@
 class Listing < ActiveRecord::Base
-   attr_accessible :name, :description, :user_id, :image
+   attr_accessible :name, :description, :user_id, :image, :price, :zipcode, :category, :tags
 
   belongs_to :user
   mount_uploader :image, ImageUploader

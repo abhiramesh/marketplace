@@ -190,6 +190,8 @@ body {
   margin-top: 40px;
   font-family: 'Oswald', sans-serif;
   font-size: 28px;
+  margin-bottom: 20px;
+  line-height: 35px;
 }
 
 .form-content{
@@ -238,6 +240,32 @@ body {
   font-family: 'Varela', sans-serif;
   letter-spacing: 0px;
   font-size: 12px;
+}
+
+.submit-form{
+  background-color: #EE743D;
+  border: none;
+  font-size: 16px;
+  padding: 10px 35px 10px 35px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Varela', sans-serif;
+  letter-spacing: -1px;
+}
+
+.submit-form:hover{
+  background-color: #cccccc;
+}
+
+.radio-label{
+  margin-bottom: -8px;
+  padding-top: 25px;
+}
+
+.form-radio-button{
+
 }
 
 

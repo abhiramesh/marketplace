@@ -2,11 +2,11 @@
   New Listing
 </div>
 <div class="container-fluid" align="center">
-  <hr class="blackline" style="margin-top:-25px;padding-bottom:40px;">
+  <hr class="blackline" style="margin-top:-35px;padding-bottom:20px;">
 </div>
 <div class="container-fluid" align="center">
   <%= form_for @listing, :html => {:multipart => true} do |f| %>
-  <div class="listing-description">
+  <div class="listing-description" id="form-part-1">
     <div class="listing-description-title">
       A perfect name for your product is:
       <%= f.text_field :name, :class => "listing-form-input", :style => "border-radius:0px;font-family:Varela;font-size:11px;" %>
@@ -27,13 +27,59 @@
       <%= f.file_field :image_2, :class => 'file-input' %>
     </div>
     <hr class="blackline" style="margin-top:-20px;width:35%;min-width: 258px;max-width: 488px;margin-bottom: 25px;">
+    <div class="submit-form" id="continue-1">
+      Continue
+    </div>
   </div>
+  <div class="listing-description" id="form-part-2" style="display:none;">
+    <div class="listing-description-title">
+      Your zipcode is: <i>(helps us find the perfect buyer)</i>
+      <%= f.number_field :zipcode, :class => "listing-form-input", :style => "border-radius:0px;font-family:Varela;font-size:11px;" %>
+    </div>
+    <hr class="blackline" style="margin-top:-20px;width:35%;min-width: 258px;max-width: 488px;margin-bottom: 25px;">
+    <div class="listing-description-title">
+      Your product falls into the category:
+      <%= f.label :category_electronics, 'Electronics', :class => "radio-label" %>
+      <%= f.radio_button :category, 'Electronics' %>
+      <%= f.label :category_vehicle, 'Vehicles', :class => "radio-label" %>
+      <%= f.radio_button :category, 'Vehicles' %>
+      <%= f.label :category_appliances, 'Appliances', :class => "radio-label" %>
+      <%= f.radio_button :category, 'Appliances' %>
+      <%= f.label :category_handmade, 'Handmade/Vintage', :class => "radio-label" %>
+      <%= f.radio_button :category, 'Handmade/Vintage' %>
+      <%= f.label :category_books, 'Books', :class => "radio-label" %>
+      <%= f.radio_button :category, 'Books' %>
+      <%= f.label :category_clothing, 'Clothing', :class => "radio-label" %>
+      <%= f.radio_button :category, 'Clothing' %>
+      <%= f.label :category_furniture, 'Furniture', :class => "radio-label" %>
+      <%= f.radio_button :category, 'Furniture' %>
+      <%= f.label :category_other, 'Other', :class => "radio-label" %>
+      <%= f.radio_button :category, 'Other' %>
+    </div>
+    <hr class="blackline" style="margin-top:-20px;width:35%;min-width: 258px;max-width: 488px;margin-bottom: 25px;">
+    <div class="listing-description-title">
+      A list of comma separated tags for your item: 
+      <%= f.text_field :tags, :class => "listing-form-input", :style => "border-radius:0px;font-family:Varela;font-size:11px;" %>
+    </div>
+    <div class="submit-form" id="continue-2">
+      Continue
+    </div>
+  </div>
+  <div class="listing-description" id="form-part-3" style="display:none;">
+    <%= render partial: '/static_pages/link_accounts' %>
+    <div align="center"><input name="commit" type="submit" value="Create Listing" class="submit-form"></div>
+  </div>
+  <% end %>
 </div>
+<script type="text/javascript">
+      $("#continue-1").click(function(){
+        $("#form-part-1").slideUp("slow");
+        $('#form-part-2').slideDown("slow");
+      });
+      $("#continue-2").click(function(){
+        $("#form-part-2").slideUp("slow");
+        $('#form-part-3').slideDown("slow");
+      });
+</script>
 
-
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
 
