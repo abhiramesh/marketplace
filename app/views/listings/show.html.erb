@@ -4,7 +4,7 @@
   <%= tag :meta, property: "og:type", content: "mrktplc:item" %>
   <%= tag :meta, property: "og:title", content: @listing.name %>
   <%= tag :meta, property: "og:url", content: request.protocol + request.host_with_port + listing_path(@listing) %>
-  <%= tag :meta, property: "og:image", content: request.protocol + request.host_with_port + image_path(@listing.image) %>
+  <%= tag :meta, property: "og:image", content: 'http://i.imgur.com/i9zjn04.png' %>
 <% end %>
 
 <p id="notice"><%= notice %></p>
