@@ -102,6 +102,7 @@ body {
   border-top: 2px solid #000000;
   padding-bottom: 30px;
   width: 22%;
+  border-bottom: none;
 }
 
 .blast-subtext{
@@ -113,7 +114,23 @@ body {
 
 .computer-home{
   width: 57%;
-margin-top: 70px;
+  margin-top: 70px;
+  margin-bottom: 60px;
+}
+
+.full-width-pic-2{
+  background: url("bike.png");
+  height: 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: brightness(-0.06);
+  padding-bottom: 125px;
+}
+
+.pricing{
+  width: 80%;
+  padding-top: 50px;
+  padding-bottom: 150px;
 }
 
 .listing-title{
@@ -133,13 +150,15 @@ margin-top: 70px;
 }
 
 .listing-description{
-  width: 35%;
+  width: 40%;
   background: #eee;
   padding: 50px;
   font-family: 'Varela', sans-serif;
   font-size: 14px;
   line-height: 24px;
   text-align: left;
+  min-width: 300px;
+  max-width: 500px;
 }
 
 .listing-description-title{
@@ -150,6 +169,7 @@ margin-top: 70px;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .listing-gallery{
@@ -190,12 +210,43 @@ margin-top: 70px;
   opacity: 0.9;
 }
 
+.listing-form-input{
+  border-radius: 0px;
+  margin-top: 5px;
+  margin-left: 15px;
+  width: 40%;
+  max-width: 237px;
+  min-width: 90px;
+  font-family: 'Varela', sans-serif;
+  font-size: 11px;
+}
+
+.listing-form-area{
+  border-radius: 0px;
+  margin-top: 5px;
+  margin-left: 15px;
+  width: 40%;
+  max-width: 237px;
+  min-width: 134px;
+  font-family: 'Varela', sans-serif;
+  font-size: 11px;
+  height: 80px;
+}
+
+.file-input{
+  margin-top: 20px;
+  font-family: 'Varela', sans-serif;
+  letter-spacing: 0px;
+  font-size: 12px;
+}
+
 
 p, ol, ul, td {
   font-family: 'Varela', sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
+
 
 pre {
   background-color: #eee;

@@ -1,25 +1,39 @@
-<%= form_for @listing, :html => {:multipart => true} do |f| %>
-  <% if @listing.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
-
-      <ul>
-      <% @listing.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<div class="container-fluid listing-title">
+  New Listing
+</div>
+<div class="container-fluid" align="center">
+  <hr class="blackline" style="margin-top:-25px;padding-bottom:40px;">
+</div>
+<div class="container-fluid" align="center">
+  <%= form_for @listing, :html => {:multipart => true} do |f| %>
+  <div class="listing-description">
+    <div class="listing-description-title">
+      A perfect name for your product is:
+      <%= f.text_field :name, :class => "listing-form-input", :style => "border-radius:0px;font-family:Varela;font-size:11px;" %>
     </div>
-  <% end %>
+    <div class="listing-description-title">
+      A few sentences to describe it are:
+      <%= f.text_area :description, :class => "listing-form-area", :style => "border-radius:0px;font-family:Varela;font-size:11px;" %>
+    </div>
+    <div class="listing-description-title">
+      The number of dollars you'd like is:
+      <%= f.text_field :price, :class => "listing-form-input", :style => "border-radius:0px;font-family:Varela;font-size:11px;" %>
+    </div>
+    <hr class="blackline" style="margin-top:-20px;width:35%;min-width: 258px;max-width: 488px;margin-bottom: 25px;">
+    <div class="listing-description-title">
+      Some fantastic pictures of your product are: 
+      <%= f.file_field :image, :class => 'file-input' %>
+      <%= f.file_field :image_1, :class => 'file-input' %>
+      <%= f.file_field :image_2, :class => 'file-input' %>
+    </div>
+    <hr class="blackline" style="margin-top:-20px;width:35%;min-width: 258px;max-width: 488px;margin-bottom: 25px;">
+  </div>
+</div>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-  <br>
-  <%= f.file_field :image %>
+
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
