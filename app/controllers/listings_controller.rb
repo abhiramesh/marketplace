@@ -1,4 +1,6 @@
 class ListingsController < ApplicationController
+  before_filter :authorize, :only => [:index, :destroy]
+  before_filter :login_required, :only => [:new, :create, :edit, :update]
   # GET /listings
   # GET /listings.json
   def index
