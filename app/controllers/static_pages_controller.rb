@@ -6,4 +6,7 @@ class StaticPagesController < ApplicationController
 	def link_accounts
 	end
 
+	def dashboard
+	end	
+
 end

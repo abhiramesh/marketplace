@@ -135,7 +135,8 @@ body {
 
 .listing-title{
   font-family: 'Oswald', sans-serif;
-  font-size: 28px;
+  font-size: 26px;
+  text-transform: uppercase;
   padding: 20px 0px 60px 0px;
   text-align: center;
 }
@@ -170,20 +171,6 @@ body {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   margin-bottom: 20px;
-}
-
-.listing-gallery{
-  width: 48%;
-  margin-top: 40px;
-  min-width: 310px;
-}
-
-.gallery-image{
-  width: 400px;
-  border: solid;
-  padding: 2px;
-  border-width: 2px;
-  border-color: #363636;
 }
 
 .form-section-title{
@@ -264,8 +251,18 @@ body {
   padding-top: 25px;
 }
 
-.form-radio-button{
+.dashboard-image{
+  width: 100%;
+}
 
+.gallery{
+  width: 20%;
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+
+.price_box{
+  width: 35%;
 }
 
 
