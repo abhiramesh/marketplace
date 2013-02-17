@@ -11,15 +11,38 @@
     </div>
   </div>
 </div>
-<div class="container-fluid blast-text">
+<div class="container-fluid blast-text" id="tour-section">
   One Post. Multiple Storefronts.
 </div>
 <hr class="blackline">
 <div class="container-fluid blast-subtext">
   Whether you're selling an old book, or a handcrafted wallet,<br> design one post and push it to all of your favorite storefronts.
 </div>
-
-</div>
 <div class="blast">
   <img src='/assets/blast.png'>
 </div>
+<div class="container-fluid" align="center">
+  <div class="container-fluid blast-text">
+    Simplify the Listing Process
+  </div>
+  <hr class="blackline">
+  <div class="container-fluid blast-subtext">
+    Create your listing using our simplified listing engine. <br> We ensure it gets placed in the best categories optimized to sell on different storefronts. 
+  </div>
+  <img src="/assets/computer.png" class="computer-home" id="pricing-section">
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#tour').click(function(){
+      $("html, body").animate({ scrollTop: $("#tour-section").offset().top }, 900);
+        console.log('executed scrollToElement');
+        return false;
+    });
+    $('#pricing').click(function(){
+      $("html, body").animate({ scrollTop: $("#pricing-section").offset().top }, 900);
+        console.log('executed scrollToElement');
+        return false;
+    });
+  });
+</script>

@@ -15,6 +15,8 @@ Marketplace::Application.routes.draw do
   match '/users/auth/twitter/callback' => 'services#create'
   resources :services, :only => [:index, :create]
 
+  get '/link_accounts', :to => "static_pages#link_accounts"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

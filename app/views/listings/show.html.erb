@@ -9,18 +9,21 @@
 
 <p id="notice"><%= notice %></p>
 
-<div class="row">
-	<div class="span2">
-		<%= @listing.name %>
-	</div>
-	<div class="span4">
-		<%= @listing.description %>
-	</div>
-	<div class="span6">
-		<%= image_tag @listing.image.to_s %>
-	</div>
+<div class="container-fluid listing-title">
+	<%= @listing.name %>
+</div>
+<div class="container-fluid" align="center">
+	<hr class="blackline" style="margin-top:-25px;padding-bottom:40px;">
 </div>
 
-
-<%= link_to 'Edit', edit_listing_path(@listing) %> |
-<%= link_to 'Back', listings_path %>
+<div class="container-fluid" align="center">
+	<div class="listing-description">
+		<div class="listing-description-title">
+			Summary
+		</div>
+			<%= @listing.description %>
+	</div>
+	<div class="listing-gallery">
+		<%= image_tag @listing.image.to_s, :class => "gallery-image" %>
+	</div>
+</div>
