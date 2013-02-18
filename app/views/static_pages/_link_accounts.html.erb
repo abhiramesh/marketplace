@@ -2,7 +2,9 @@
 	<div class="form-section-title">
 		Link Your Social Accounts:
 	</div>
+		<% unless current_user.provider == 'facebook' %>
 		<a href="/users/auth/facebook"><img src="/assets/fb.png" class="social-button"></a>
 		<br>
+		<% end %>
 		<a href="/users/auth/twitter"><img src="/assets/twitter.png" class="social-button"></a>
 </div>
