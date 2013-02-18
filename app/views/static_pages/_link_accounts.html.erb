@@ -8,7 +8,7 @@
 		<a href="/users/auth/facebook"><img src="/assets/fb.png" class="social-button"></a>
 		<br>
 		<% end %>
-		<% unless Service.find_by_user_id(current_user.id).provider == 'twitter' %>
+		<% unless Service.find_by_user_id(current_user.id) != nil &&Service.find_by_user_id(current_user.id).provider == 'twitter' %>
 		<a href="/users/auth/twitter"><img src="/assets/twitter.png" class="social-button"></a>
 		<% end %>
 </div>
