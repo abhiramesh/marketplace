@@ -1,10 +1,14 @@
 <div class="container-fluid" align="center">
-	<div class="form-section-title">
-		Link Your Social Accounts:
-	</div>
+	<% unless Service.find_by_user_id(current_user.id).provider == 'twitter' %>
+		<div class="form-section-title">
+			Link Your Social Accounts:
+		</div>
+	<% end %>
 		<% unless current_user.provider == 'facebook' %>
 		<a href="/users/auth/facebook"><img src="/assets/fb.png" class="social-button"></a>
 		<br>
 		<% end %>
+		<% unless Service.find_by_user_id(current_user.id).provider == 'twitter' %>
 		<a href="/users/auth/twitter"><img src="/assets/twitter.png" class="social-button"></a>
+		<% end %>
 </div>
