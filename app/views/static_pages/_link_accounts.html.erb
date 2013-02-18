@@ -1,5 +1,5 @@
 <div class="container-fluid" align="center">
-	<% unless Service.find_by_user_id(current_user.id).provider == 'twitter' %>
+	<% unless Service.find_by_user_id(current_user.id) != nil && Service.find_by_user_id(current_user.id).provider == 'twitter' %>
 		<div class="form-section-title">
 			Link Your Social Accounts:
 		</div>
