@@ -17,6 +17,7 @@ Marketplace::Application.routes.draw do
 
   get '/link_accounts', :to => "static_pages#link_accounts"
   get '/dashboard', :to => "static_pages#dashboard"
+  get '/test', :to => "static_pages#test"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
